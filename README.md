@@ -21,6 +21,7 @@
 ## Replaced Festival Repositories
 
 - [SolidStart 版](https://github.com/wings1685/flugel-website)
+- [Qwik 版](https://github.com/wings1685/flugel-website-qwik)
 
 ## Related Articles
 
