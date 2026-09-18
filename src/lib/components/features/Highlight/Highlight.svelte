@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { DeepGuard } from "$lib/_global/types/types";
-
 	import "./Highlight.sass";
 
 	type Props = {

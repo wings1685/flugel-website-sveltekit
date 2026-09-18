@@ -16,12 +16,13 @@
 ## Replaced Features
 
 - SolidStart から SvelteKit への翻訳（JSX → Svelte テンプレート、Signal → Runes）
-- Shiki コードの色付け実行を +page.server.ts でビルド時に生成
+- Shiki コードの色付け実行を +page.server.ts でビルド時に生成、クライアント時の実行なし
 
 ## Replaced Festival Repositories
 
 - [SolidStart 版](https://github.com/wings1685/flugel-website)
 - [Qwik 版](https://github.com/wings1685/flugel-website-qwik)
+- [Next.js 版](https://github.com/wings1685/flugel-website-next)
 
 ## Related Articles
 
