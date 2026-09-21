@@ -7,7 +7,14 @@
 		gap: 10px 0
 
 		a.glass.mini
+			max-width: 100%
+			justify-content: flex-start
+			overflow: hidden
+
+			i
+				margin: 0 10px 0 0
 			p
+				max-width: 100%
 				+ellipsis()
 		.published
 			margin-left: auto
@@ -25,10 +32,6 @@
 	#blog_entries
 		article
 			a.glass.mini
-				width: 100%
-				justify-content: flex-start
-
-				i
-					margin-left: auto
+				justify-content: flex-end
 			.published
 				margin-top: 10px
