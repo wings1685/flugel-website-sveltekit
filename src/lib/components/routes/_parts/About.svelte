@@ -11,7 +11,7 @@
 		このサイトは SolidStart で構築しました。他にも SvelteKit / Astro / Next / Nuxt / Qwik City で構築したプロジェクトがあります。型の制御例や実験・構築一覧は、各ページを参照してください。
 	</Paragraph>
 	<Group direction="right">
-		<Glass as="a" href="/types" icon="arrow" isDark>型の制御例</Glass>
 		<Glass as="a" href="/archives" icon="arrow" isDark>実験・構築一覧</Glass>
+		<Glass as="a" href="/types" icon="arrow" isDark>型の制御例</Glass>
 	</Group>
 </Glass>
