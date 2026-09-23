@@ -10,7 +10,14 @@
 	const { selectedMonth, setSelectedMonth } = useStore('selectedMonth');
 
 	let elBg: HTMLImageElement;
-	const getSrcset = (month?: Months) => month ? `/images/bg/${ month }.webp 1920w, /images/bg/${ month }_sp.webp 768w` : '';
+	const imagePath = '/images/bg/';
+	const getImagePc = (month?: Months) => month ? `${imagePath}${ month }.webp` : '';
+	const getImageSp = (month?: Months) => month ? `${imagePath}${ month }_sp.webp` : '';
+	const getSrcset = (month?: Months) => {
+		if (import.meta.env.SSR || !month) return '';
+
+		return window.innerWidth <= 750 ? getImageSp(month) : getImagePc(month);
+	};
 
 	onMount(() => {
 		const month = months[(new Date()).getMonth()];
@@ -41,8 +48,11 @@
 	});
 </script>
 <div id="bg">
-	<img bind:this={ elBg } alt="" srcset={ getSrcset(currentMonth) } data-testid="bg" />
+	<picture>
+		<source media="(max-width: 750px)" srcset={ getImageSp(currentMonth) } />
+		<img bind:this={ elBg } src={ getImagePc(currentMonth) } alt="" data-testid="bg" />
+	</picture>
 	{#if selectedMonth()}
-		<img id="selected_bg" srcset={ getSrcset(selectedMonth()) } alt="" />
+		<img id="selected_bg" src={ getSrcset(selectedMonth()) } alt="" />
 	{/if}
 </div>
