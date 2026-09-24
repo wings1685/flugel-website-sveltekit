@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { PageMeta } from "$lib/components/shared/Utils";
 	import { DeepGuard as DeepGuardCodes, Exclude, Props } from "./_parts";
 	import { Box, Glass } from "$lib/components/shared/Sections";
 	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import SiteMeta from "../SiteMeta.svelte";
 	import type { CodesProps } from "./_models/types";
 	import type { DeepGuard } from "$lib/_global/types/types";
 
 	const props: DeepGuard<CodesProps> = $props();
 </script>
 <main>
-	<PageMeta title="Types" />
+	<SiteMeta dir="/types" />
 	<Glass as="section">
 		<Box>
 			<PageTitle icon="code">型の制御例</PageTitle>

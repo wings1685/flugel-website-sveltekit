@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { PageMeta } from "$lib/components/shared/Utils";
 	import { Archives, Experiments, Environment } from "./_parts";
+	import SiteMeta from "../SiteMeta.svelte";
 </script>
 <main>
-	<PageMeta title="Archives" />
+	<SiteMeta dir="/archives" />
 	<Environment />
 	<Experiments />
 	<Archives />

@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import yaml from "@rollup/plugin-yaml";
 
 export default defineConfig({
 	plugins: [
@@ -17,8 +18,9 @@ export default defineConfig({
 			adapter: adapter({
 				pages: 'build',
 				assets: 'build',
-				fallback: undefined
+				fallback: '/404/index.html'
 			})
-		})
+		}),
+		yaml(),
 	]
 });
