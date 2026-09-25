@@ -43,7 +43,7 @@ const getAvailableDirs = (paths: string[], dir: string) => {
 };
 
 export const buildMeta = (props: DeepGuard<Props>): MetaData => {
-	const { dir = '/', globData, pageData } = props;
+	const { dir = '/', meta, globData, pageData } = props;
 
 	const paths = getPaths(pageData);
 	if (dir && !paths.includes(dir)) {
@@ -72,10 +72,10 @@ export const buildMeta = (props: DeepGuard<Props>): MetaData => {
 		const data = globData[yamlPath].default;
 		v.parse(MetaSchema, data);
 
-		const canOverrideTitle = !props.meta?.title || path !== pagePath;
+		const canOverrideTitle = !meta?.title || path !== pagePath;
 		setMeta(data, canOverrideTitle);
 	});
-	setMeta(props.meta);
+	setMeta(meta);
 
 	const data: MetaData = {
 		title: metaData.titles.join(separator),
