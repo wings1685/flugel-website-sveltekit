@@ -6,7 +6,7 @@
 	import type { YamlFiles, MetaProps } from "$lib/_global/lib/meta";
 
 	const globData = import.meta.glob('./**/_data/meta.yaml', { eager: true }) as YamlFiles;
-	const pageData = import.meta.glob('./**/Page.svelte', { eager: true });
+	const pageData = import.meta.glob('./**/Page.svelte');
 
 	const props: DeepGuard<MetaProps> = $props();
 	const pageProps = untrack(() => props);
