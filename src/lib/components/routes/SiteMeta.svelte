@@ -7,16 +7,9 @@
 
 	const globData = import.meta.glob('./**/_data/meta.yaml', { eager: true }) as YamlFiles;
 	const pageData = import.meta.glob('./**/Page.svelte', { eager: true });
-	const pagePaths = Object.keys(pageData).map(path => `/${path.split('/').slice(1, -1).join('/')}`);
 
 	const props: DeepGuard<MetaProps> = $props();
 	const pageProps = untrack(() => props);
-	if (pageProps.dir && !pagePaths.includes(pageProps.dir)) {
-		const getParentDir = (dir: string) => dir.split('/').filter((d, i) => d || i === 0).slice(0, -1).join('/') || '/';
-		const parentDir = getParentDir(pageProps.dir);
-		const availableDirs = pagePaths.filter(path => getParentDir(path) === parentDir);
-		console.error('Undefined directory, available directories: ', availableDirs);
-	}
-	const meta = buildMeta({ ...pageProps, globData });
+	const meta = buildMeta({ ...pageProps, globData, pageData });
 </script>
 <MetaTags { ...meta } />

@@ -25,6 +25,7 @@ export type MetaProps = {
 };
 type Props = MetaProps & {
 	globData: YamlFiles;
+	pageData: Record<string, unknown>;
 };
 
 const separator = ' | ';
@@ -33,9 +34,22 @@ const convertDirectoryArray = (dir: string) => {
 
 	return dirs.map(path => path ? `${path}/` : path);
 };
+const getPaths = (pageData: Props['pageData']) => Object.keys(pageData).map(path => `/${path.split('/').slice(1, -1).join('/')}`);
+const getParentDir = (dir: string) => dir.split('/').filter((d, i) => d || i === 0).slice(0, -1).join('/') || '/';
+const getAvailableDirs = (paths: string[], dir: string) => {
+	const parentDir = getParentDir(dir);
+
+	return paths.filter(path => getParentDir(path) === parentDir);
+};
 
 export const buildMeta = (props: DeepGuard<Props>): MetaData => {
-	const { dir = '/', globData } = props;
+	const { dir = '/', globData, pageData } = props;
+
+	const paths = getPaths(pageData);
+	if (dir && !paths.includes(dir)) {
+		const availableDirs = getAvailableDirs(paths, dir);
+		console.error('Undefined directory, available directories: ', availableDirs);
+	}
 	const metaData: MetaInfo = { titles: [], description: '', ogImage: '', siteTitle: '' };
 
 	const pagePaths = convertDirectoryArray(dir);
