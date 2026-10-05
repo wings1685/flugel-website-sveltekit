@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { sites } from "../_models/usePage";
-	import { Glass, HorizontalList, VerticalList } from "$lib/components/shared/Sections";
-	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import { Glass, HorizontalList, VerticalList } from "#lib/components/shared/Sections/index.ts";
+	import { PageTitle, Paragraph } from "#lib/components/shared/Typography/index.ts";
 	import "./Archives.sass";
 </script>
 <Glass as="section">

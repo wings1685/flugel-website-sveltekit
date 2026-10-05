@@ -13,6 +13,8 @@
 - Valibot
 - Shiki
 
+2026/10/05 に 2.70.3 から 3.0.0 へ移行しました。
+
 ## Replaced Features
 
 - SolidStart から SvelteKit への翻訳（JSX → Svelte テンプレート、Signal → Runes）
@@ -33,6 +35,7 @@
 
 - [同一サイトの 9 フレームワークパターンでのリプレイス祭](https://wings.hatenablog.com/entry/replaceFestival)
 - [Meta 生成機構祭](https://wings.hatenablog.com/entry/metaFestival)
+- [SvelteKit 3 への移行探訪記](https://wings.hatenablog.com/entry/journeyToSvelteKit3)
 
 ## Folder Map
 

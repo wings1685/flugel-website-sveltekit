@@ -1,9 +1,9 @@
-import { codes as codeDeepGuard } from '$lib/components/routes/types/_models/codeDeepGuard';
-import { codes as codeProps } from '$lib/components/routes/types/_models/codeProps';
-import { codes as codeExclude } from '$lib/components/routes/types/_models/codeExclude';
-import { getHighlightedCode } from '$lib/components/features/Highlight/_models/usePage';
-import { unescapeTag } from '$lib/_global/lib/utils';
-import type { CodesProps } from '$lib/components/routes/types/_models/types';
+import { codes as codeDeepGuard } from "#lib/components/routes/types/_models/codeDeepGuard.ts";
+import { codes as codeProps } from "#lib/components/routes/types/_models/codeProps.ts";
+import { codes as codeExclude } from "#lib/components/routes/types/_models/codeExclude.ts";
+import { getHighlightedCode } from "#lib/components/features/Highlight/_models/usePage.ts";
+import { unescapeTag } from "#lib/_global/lib/utils.ts";
+import type { CodesProps } from "#lib/components/routes/types/_models/types.ts";
 
 export const load = async () => {
 	const typesDeepGuard = await getHighlightedCode(codeDeepGuard.types);

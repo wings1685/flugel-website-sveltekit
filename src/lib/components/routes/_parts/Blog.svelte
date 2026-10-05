@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { fetchEntries } from "../_models/usePage";
-	import { Glass, VerticalList } from "$lib/components/shared/Sections";
-	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import { Glass, VerticalList } from "#lib/components/shared/Sections/index.ts";
+	import { PageTitle, Paragraph } from "#lib/components/shared/Typography/index.ts";
 	import type { BlogEntries, BlogEntry } from "../_models/schema";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 	import "./Blog.sass";
 
 	let entries = $state<DeepGuard<BlogEntry[]>>([...Array(5)].map((_, i) => ({

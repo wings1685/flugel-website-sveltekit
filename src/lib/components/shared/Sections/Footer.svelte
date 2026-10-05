@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { flugel } from "$lib/_global/lib/shared";
+	import { flugel } from "#lib/_global/lib/shared.ts";
 	import { Glass, Group } from "./";
 
 	let year = $state<number>(2026);

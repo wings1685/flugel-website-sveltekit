@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ParagraphAttributes, DivAttributes } from "$lib/_global/types/components";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { ParagraphAttributes, DivAttributes } from "#lib/_global/types/components.ts";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 	import "./Paragraph.sass";
 
 	type Props = (ParagraphAttributes & {

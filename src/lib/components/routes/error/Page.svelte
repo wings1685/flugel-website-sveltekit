@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Glass, Group } from "$lib/components/shared/Sections";
-	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import { Glass, Group } from "#lib/components/shared/Sections/index.ts";
+	import { PageTitle, Paragraph } from "#lib/components/shared/Typography/index.ts";
 	import SiteMeta from "../SiteMeta.svelte";
 </script>
 <main>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { DivAttributes } from "$lib/_global/types/components";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { DivAttributes } from "#lib/_global/types/components.ts";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 	import "./Box.sass";
 
 	const props: DeepGuard<DivAttributes> = $props();

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Glass } from "$lib/components/shared/Sections";
-	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import { Glass } from "#lib/components/shared/Sections/index.ts";
+	import { PageTitle, Paragraph } from "#lib/components/shared/Typography/index.ts";
 </script>
 <Glass as="section">
 	<PageTitle icon="lock">著作権・運用・免責事項</PageTitle>

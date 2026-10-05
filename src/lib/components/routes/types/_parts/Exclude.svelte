@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { Box } from "$lib/components/shared/Sections";
-	import { Paragraph } from "$lib/components/shared/Typography";
-	import { Highlight } from "$lib/components/features";
+	import { Box } from "#lib/components/shared/Sections/index.ts";
+	import { Paragraph } from "#lib/components/shared/Typography/index.ts";
+	import { Highlight } from "#lib/components/features/index.ts";
 	import type { CodesProps } from "../_models/types";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 
 	type Props = CodesProps['exclude'];
 

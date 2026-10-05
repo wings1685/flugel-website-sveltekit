@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Section } from "./";
 	import { Icon } from "../Utils";
-	import type { AsDiv, AsSection, AsLink } from "$lib/_global/types/components";
+	import type { AsDiv, AsSection, AsLink } from "#lib/_global/types/components.ts";
 	import type { ComponentProps } from "svelte";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 	import "./Glass.sass";
 
 	type IconProps = Pick<ComponentProps<typeof Icon>, 'type'>;

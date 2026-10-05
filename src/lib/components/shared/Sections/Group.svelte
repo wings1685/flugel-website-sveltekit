@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { untrack } from "svelte";
-	import type { Directions, DivAttributes, Sizes } from "$lib/_global/types/components";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { Directions, DivAttributes, Sizes } from "#lib/_global/types/components.ts";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 	import "./Group.sass";
 
 	type Props = DivAttributes & {

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { months } from "$lib/_global/lib/shared";
-	import { sleep } from "$lib/_global/lib/utils";
-	import { useStore } from "$lib/_global/piquo";
-	import type { Months } from "$lib/_global/lib/shared";
+	import { months } from "#lib/_global/lib/shared.ts";
+	import { sleep } from "#lib/_global/lib/utils.ts";
+	import { useStore } from "#lib/_global/piquo/index.ts";
+	import type { Months } from "#lib/_global/lib/shared.ts";
 	import "./Bg.sass";
 
 	let currentMonth = $state<Months>();

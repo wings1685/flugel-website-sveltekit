@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { monthData } from "$lib/_global/lib/shared";
-	import { useStore } from "$lib/_global/piquo";
+	import { monthData } from "#lib/_global/lib/shared.ts";
+	import { useStore } from "#lib/_global/piquo/index.ts";
 	import { Glass } from "./";
-	import type { Months } from "$lib/_global/lib/shared";
+	import type { Months } from "#lib/_global/lib/shared.ts";
 	import "./Nav.sass";
 
 	const { selectedMonth, setSelectedMonth } = useStore('selectedMonth');

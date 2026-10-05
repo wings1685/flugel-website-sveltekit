@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { MetaData } from "$lib/_global/lib/meta";
+	import type { MetaData } from "#lib/_global/lib/meta.ts";
 
 	const props: MetaData = $props();
 </script>

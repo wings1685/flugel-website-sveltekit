@@ -2,7 +2,7 @@ import ky from "ky";
 import * as v from "valibot";
 import { BlogEntriesSchema } from "./schema";
 import type { BlogEntry } from "./schema";
-import type { DeepGuard } from "$lib/_global/types/types";
+import type { DeepGuard } from "#lib/_global/types/types.ts";
 
 const blogEndpoint = 'https://wings.hatenablog.com';
 

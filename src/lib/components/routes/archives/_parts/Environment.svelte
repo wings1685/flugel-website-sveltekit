@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { environment, stacks } from "../_models/usePage";
-	import { Box, Glass, HorizontalList } from "$lib/components/shared/Sections";
-	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import { Box, Glass, HorizontalList } from "#lib/components/shared/Sections/index.ts";
+	import { PageTitle, Paragraph } from "#lib/components/shared/Typography/index.ts";
 </script>
 <Glass as="section">
 	<Box>

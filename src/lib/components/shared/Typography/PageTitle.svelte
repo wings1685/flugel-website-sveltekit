@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Icon } from "../Utils";
-	import type { DeepGuard } from "$lib/_global/types/types";
-	import type { HAttributes } from "$lib/_global/types/components";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
+	import type { HAttributes } from "#lib/_global/types/components.ts";
 	import type { ComponentProps } from "svelte";
 	import "./PageTitle.sass";
 

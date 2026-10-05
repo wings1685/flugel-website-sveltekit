@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { DeepGuard as DeepGuardCodes, Exclude, Props } from "./_parts";
-	import { Box, Glass } from "$lib/components/shared/Sections";
-	import { PageTitle, Paragraph } from "$lib/components/shared/Typography";
+	import { Box, Glass } from "#lib/components/shared/Sections/index.ts";
+	import { PageTitle, Paragraph } from "#lib/components/shared/Typography/index.ts";
 	import SiteMeta from "../SiteMeta.svelte";
 	import type { CodesProps } from "./_models/types";
-	import type { DeepGuard } from "$lib/_global/types/types";
+	import type { DeepGuard } from "#lib/_global/types/types.ts";
 
 	const props: DeepGuard<CodesProps> = $props();
 </script>

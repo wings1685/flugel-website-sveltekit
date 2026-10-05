@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { useStore } from "$lib/_global/piquo";
+	import { useStore } from "#lib/_global/piquo/index.ts";
 	import { Glass } from "./";
 	import "./Header.sass";
 

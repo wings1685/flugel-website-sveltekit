@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type { Months } from "$lib/_global/lib/shared";
+import type { Months } from "#lib/_global/lib/shared.ts";
 
 type Store = Months | '';
 const initialValue: Store = '';
