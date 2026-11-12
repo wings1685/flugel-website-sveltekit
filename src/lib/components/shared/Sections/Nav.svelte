@@ -17,6 +17,6 @@
 </script>
 <nav class="wrapper">
 	{#each Object.entries(monthData) as [key, name]}
-		<Glass as="div" mini isDark onclick={ (e) => handleClick(e, key) } class="btn_nav">{ name }</Glass>
+		<Glass as="div" mini isDark onclick={ (e) => handleClick(e, key) } class="btn_nav" data-testid="btnNav">{ name }</Glass>
 	{/each}
 </nav>
